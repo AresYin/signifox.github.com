@@ -1,0 +1,77 @@
+---
+layout: page
+---
+
+<section>
+<div class="row-fluid post-meta">
+	时间：<span class="label label-warning">{{ page.date | date:"%Y-%m-%d" }}</span>
+	,作者：<a href="/about.html"><span class="label label-success">signifox</span></a>
+</div>
+</section>
+
+<section>
+<div class="row-fluid">
+	{{ content }}
+</div>	
+</section>
+
+<section>
+<div class="row-fluid">
+	<div class="span12 post-footer"> 
+	<p>声明: 本文采用 
+		<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="自由转载-非商用-非衍生-保持署名"><span class="label label-warning">BY-NC-SA</span> - 自由转载-非商用-非衍生-保持署名</a> 授权。
+	</p>
+	<p>分类：
+		{% for cat in page.categories %}
+			<a href="/categories.html#{{ cat }}"><span class="label label-important">{{ cat }}</span></a>
+		{% endfor %}
+	</p>
+	<p>标签：
+		{% for tag in page.tags %}
+			<a href="/tags.html#{{ tag }}"><span class="label label-info">{{ tag }}</span></a>
+		{% endfor %}
+	</p>
+	</div>
+</div>
+</section>
+
+<section>
+<div class="row-fluid">
+	<div class="span12  post-pager"> 
+	<ul class="pager">
+		{% if page.previous %}
+			<li class="previous">
+				<a href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
+			</li>
+		{% endif %}
+		{% if page.next %}
+			<li class="next">
+				<a href="{{ page.next.url }}" class="pull-right">{{ page.next.title }} &rarr;</a>
+			</li>
+		{% endif %}
+	</ul>
+	</div>
+</div>
+</section>
+
+<section>
+<div class="row-fluid">
+	<h2 class="post-header">相关文章</h2>
+	<ul class="page-list">
+		{% for post in site.related_posts limit:4 %}
+		<li>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+		<span>{{ post.date | date:"%Y-%m-%d" }}</span>
+		</li>
+		{% endfor %}
+	</ul>
+</div> 
+
+<div class="row-fluid">
+	<h2 class="post-header">评论</h2>
+	<div class="post-comment">
+		{% include disqus_comments.md %}
+	</div>
+</div>  
+{% include baidu_share.md %}
+</section>

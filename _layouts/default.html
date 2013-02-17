@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+		<meta name="description" content="signifox's blog">
+		<meta name="keywords" content="signifox" />
+		<meta name="author" content="signifox" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="/media/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/media/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/media/css/font-awesome.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/media/css/layout.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="/media/css/highlight.css" rel="stylesheet" type="text/css" media="all" />
+		<script src="/media/js/jquery.js" type="text/javascript"></script>
+		<!--[if lt IE 9]><script src="/media/js/html5.js"></script><![endif]-->
+		<link rel="shortcut icon" href="/media/ico/favicon.ico">
+		<link href="/atom.xml" rel="alternate" title="{{ site.author }}" type="application/atom+xml" />
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span2">
+					<div class="row-fluid  page-nav">
+						<nav>
+						<ul class="nav nav-pills nav-stacked">
+							<li><a href="/"><i class="icon-home"></i>首页</a></li>
+							<li><a href="/archives.html"><i class="icon-th-large"></i>归档</a></li>
+							<li><a href="/categories.html"><i class="icon-cogs"></i>分类</a></li>
+							<li><a href="/tags.html"><i class="icon-tags"></i>标签</a></li>
+							<li><a href="/about.html"><i class="icon-user"></i>关于</a></li>
+							<li><a href="/links.html"><i class="icon-link"></i>链接</a></li>
+							<li><a href="/atom.xml"><i class="icon-rss"></i>订阅</a></li>
+						</ul>
+						</nav>
+					</div>
+				</div>
+
+				<div class="span9">
+					
+					{{ content }}
+					
+					<div class="row-fluid page-footer">
+						<footer>
+						<span>
+							Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> 
+            				| Copyright 2010-{{site.time | date:"%Y"}} by <a href="/about.html">{{ site.author }}</a>
+							| <span class="label label-success">{{site.time | date:"%Y-%m-%d %H:%M:%S"}}</span>
+						</span>
+						</footer>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<script src="/media/js/bootstrap.js" type="text/javascript"></script>
+		{% include google_analysis.md %}
+	</body>
+</html>

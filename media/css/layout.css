@@ -3,7 +3,7 @@
 body {
   font-size:16px;
   word-spacing:1px; 
-	margin: 0;
+  margin: 0;
   font-family:"Monaco","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
   background: url("/media/ico/grid-masked.png") repeat scroll 0 0 transparent;
 }
@@ -80,7 +80,6 @@ embed,object,iframe{display:block;margin:5px auto;}
 }
 
 .page-list li:hover{
-  text-decoration: none;
   text-shadow: none;
   color: white;
   border: none;
@@ -90,6 +89,7 @@ embed,object,iframe{display:block;margin:5px auto;}
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
+  text-decoration: none;
 }
 
 .page-footer {

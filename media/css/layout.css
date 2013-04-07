@@ -1,15 +1,11 @@
+/*Made by signifox(http://shawhu.org , signifox@gmail.com), For self blog!*/
 @charset "utf-8";
-
 body {
   font-size:16px;
   word-spacing:1px; 
 	margin: 0;
   font-family:"Monaco","Hiragino Sans GB","Microsoft YaHei",Trebuchet,"Trebuchet MS",Tahoma,"Lucida Grande","Lucida Sans Unicode",Verdana,sans-serif;
   background: url("/media/ico/grid-masked.png") repeat scroll 0 0 transparent;
-}
-
-a ,a:hover {
-  text-decoration: none;
 }
 
 p {
@@ -70,11 +66,13 @@ embed,object,iframe{display:block;margin:5px auto;}
 }
 
 .page-list li a {
+  text-decoration: none;
   padding-left: 10px;
   font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .page-list li span {
+  text-decoration: none;
   color: #000000;
   float: right;
   font-weight: 500;
@@ -131,10 +129,12 @@ embed,object,iframe{display:block;margin:5px auto;}
 }
 
 .pagination ul li a.active {
+  text-decoration: none;
   background-color: red; 
 }
 .pagination ul li a:hover {
   color: #ffffff;
+  text-decoration: none;
   background-color: #000000; 
 }
 
